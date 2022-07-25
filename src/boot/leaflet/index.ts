@@ -1,4 +1,4 @@
 import { InjectionKey } from 'vue';
 
-export const leafletKey: InjectionKey<typeof import('leaflet')> =
-  Symbol('leaflet');
+export type Leaflet = typeof import('leaflet');
+export const leafletKey: InjectionKey<Leaflet> = Symbol('leaflet');
