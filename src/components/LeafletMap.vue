@@ -10,9 +10,9 @@ import {
   InjectionKey,
   provide,
 } from 'vue';
-import { leafletKey } from 'src/boot/leaflet';
+import { leafletKey, Map, TileLayer } from 'src/boot/leaflet';
 
-type RefMap = Ref<L.Map | undefined>;
+type RefMap = Ref<Map | undefined>;
 export const leafletMapKey: InjectionKey<RefMap> = Symbol();
 
 export default defineComponent({
@@ -52,9 +52,9 @@ export default defineComponent({
   },
   setup(props, { slots }) {
     const elem = ref(null);
-    const map = ref<L.Map>();
-    const layer = ref<L.TileLayer>();
     const l = inject(leafletKey);
+    const map = ref<Map>();
+    const layer = ref<TileLayer>();
 
     provide(leafletMapKey, map);
 
