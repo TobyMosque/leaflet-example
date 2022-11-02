@@ -8,11 +8,13 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import LeafletMap from 'components/LeafletMap.vue';
-import LeafletMark from 'src/components/LeafletMark.vue';
 
 export default defineComponent({
-  name: 'IndexPage',
-  components: { LeafletMap, LeafletMark },
+  name: 'ErrorNotFound',
 });
+</script>
+
+<script setup lang="ts">
+import LeafletMap from 'components/LeafletMap.vue';
+import LeafletMark from 'src/components/LeafletMark.vue';
 </script>
